@@ -1,10 +1,7 @@
 <template>
   <div>
-    <mt-swipe :auto="2000">
-      <mt-swipe-item v-for="item in sliderList" :key="item.id">
-        <img :src="item.img" alt />
-      </mt-swipe-item>
-    </mt-swipe>
+
+   <swiper :lunbotuList="sliderList" :isfull="true"></swiper>
 
         <!-- 九宫格 -->
     <ul class="mui-table-view mui-grid-view mui-grid-9 cms-nav-link">
@@ -21,10 +18,10 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/goodsList">
           <img src="../../assets/images/menu3.png" alt="">
           <div class="mui-media-body">商品购买</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
@@ -50,6 +47,7 @@
 
 <script>
 import axios from "axios";
+import swiper from "../subcomponents/swiper.vue";
 
 export default {
   data() {
@@ -70,6 +68,9 @@ export default {
         }
       });
     }
+  },
+    components: {
+    swiper
   }
 };
 </script>

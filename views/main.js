@@ -9,11 +9,16 @@ import "mint-ui/lib/style.css"
 import { Header } from 'mint-ui'
 Vue.component(Header.name, Header)
 
-import { Swipe, SwipeItem,Button} from 'mint-ui';
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-Vue.component(Button.name, Button);
+// import { Swipe, SwipeItem,Button} from 'mint-ui';
+// Vue.component(Swipe.name, Swipe);
+// Vue.component(SwipeItem.name, SwipeItem);
+// Vue.component(Button.name, Button);
+import Mintui from "mint-ui"
+Vue.use(Mintui)
+import"mint-ui/lib/style.css"
 
+import preview from "vue-preview"
+Vue.use(preview)
 
 import "./src/assets/lib/mui/css/mui.css"
 import "./src/assets/lib/mui/css/icons-extra.css"
